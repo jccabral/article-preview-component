@@ -21,9 +21,7 @@
         grid-template-columns: 4em 10em;
         grid-template-areas: 'avatar text';
 
-        font-size: $size-13;
-
-        margin: 2em 0 0 0;
+        font-size: $size-13;        
         
         &-avatar{
             grid-area: avatar;
@@ -39,9 +37,36 @@
 
         &-date {
             grid-area: text;
+            
             font-weight: $light;
             color: $grayish-blue;
+            
             align-self: flex-end;
+        }
+    }
+
+    &__share {
+
+        &-button {
+            display: flex;
+            align-self: center;
+            align-items: center;
+            justify-content: center;
+            
+            background: $light-grayish-blue;
+            border-radius: 100%;
+
+            width: 2em;
+            height: 2em;
+
+            font-size: 1.1em;
+            color: $desaturated-dark-blue;
+
+            &--active {
+                background: $very-dark-grayish-blue;
+                color: $white;
+            }
+
         }
     }
 }
