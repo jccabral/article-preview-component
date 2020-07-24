@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 
 const CardInfo = () => {
+
+    const [active, setActive] = useState(false);
+
+    const toggleActive = () => {
+        setActive(!active);
+    }
+
     return(
         <article className="card__info">
             <h1 className="info__title">
@@ -22,7 +29,7 @@ const CardInfo = () => {
                 </div>
 
                 <div className="info__share">
-                    <div className="info__share-button">
+                    <div className={active ? "info__share-button--active" : "info__share-button"} onClick={toggleActive}>
                         <i className="fas fa-share" />
                     </div>
                 </div>

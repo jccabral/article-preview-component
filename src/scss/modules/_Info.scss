@@ -63,6 +63,7 @@
             color: $desaturated-dark-blue;
 
             &--active {
+                @extend .info__share-button;
                 background: $very-dark-grayish-blue;
                 color: $white;
             }
