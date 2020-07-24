@@ -1,0 +1,18 @@
+@import '../config/colors';
+@import '../config/fonts';
+
+.App {
+    min-height: 100vh;
+    
+    background: $light-grayish-blue;
+    
+    font-family: $manrope;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        margin: 0;
+    }
+};
