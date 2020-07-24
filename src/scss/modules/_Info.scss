@@ -1,0 +1,47 @@
+@import 'config/colors';
+@import 'config/fonts';
+
+.info  {
+
+    &__title {
+        color: $very-dark-grayish-blue;
+        font-size: 1.4em;
+    }
+
+    &__description {
+        color: $desaturated-dark-blue;
+
+        font-size: $size-13;
+        font-weight: $light;
+        line-height: 1.6;
+    }
+
+    &__author {
+        display: grid;
+        grid-template-columns: 4em 10em;
+        grid-template-areas: 'avatar text';
+
+        font-size: $size-13;
+
+        margin: 2em 0 0 0;
+        
+        &-avatar{
+            grid-area: avatar;
+            max-height: 2.9em;
+            border-radius: 100%;
+        }
+
+        &-name {
+            grid-area: text;
+            font-weight: $bold;
+            color: $very-dark-grayish-blue;
+        }
+
+        &-date {
+            grid-area: text;
+            font-weight: $light;
+            color: $grayish-blue;
+            align-self: flex-end;
+        }
+    }
+}
