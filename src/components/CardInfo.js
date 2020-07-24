@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ShareMenu from './ShareMenu';
 
 const CardInfo = () => {
 
@@ -23,7 +24,7 @@ const CardInfo = () => {
 
             <div className="card__footer">
                 <div className="info__author">
-                    <img src={process.env.PUBLIC_URL + '/static/img/avatar-michelle.jpg'} className="info__author-avatar"/>
+                    <img src={process.env.PUBLIC_URL + '/static/img/avatar-michelle.jpg'} alt="avatar" className="info__author-avatar"/>
                     <p className="info__author-name">Michelle Appleton</p>
                     <p className="info__author-date">28 Jun 2020</p>
                 </div>
@@ -32,7 +33,10 @@ const CardInfo = () => {
                     <div className={active ? "info__share-button--active" : "info__share-button"} onClick={toggleActive}>
                         <i className="fas fa-share" />
                     </div>
+                    
+                    {active ? <ShareMenu /> : null}
                 </div>
+
             </div>
         </article>
     )
