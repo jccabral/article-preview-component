@@ -18,11 +18,12 @@
         grid-area: image;
         background: black;
         
+        overflow: hidden;
         border-radius: 10px 0 0 10px;
 
         &--content {
-            width: 100%;
-            overflow: hidden;
+            max-height: 19em;
         };
+
     }
 }
