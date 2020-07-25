@@ -68,6 +68,8 @@
                 @extend .info__share-button;
                 background: $very-dark-grayish-blue;
                 color: $white;
+
+                transition: background 0.3s ease;
             }
 
         }
