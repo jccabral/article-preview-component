@@ -14,6 +14,8 @@
 
     box-shadow: 0 0 1em 1px rgba($color: #000000, $alpha: 0.03);
 
+    transform: scale(0.9);
+
     &__image {
         grid-area: image;
         
@@ -27,7 +29,7 @@
     }
 
     &__info {
-        padding: 2em 2.6em;
+        padding: 2em 2.2em;
     }
 
     &__footer {
@@ -35,5 +37,64 @@
         margin: 1.6em 0 0 0;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+@mixin grid-mobile($row1, $row2) {
+    grid-template-columns: none;
+    grid-template-rows: $row1 $row2;
+    grid-template-areas: 'image' 'info';   
+}
+
+@media screen and (max-width: 768px) {
+ 
+
+    .card {
+        width: 24em;
+        height: 36em;
+
+        @include grid-mobile(14em, 22em);
+
+        &__image {
+            border-radius: 10px 10px 0 0;
+
+            &-content {
+                max-height: 20em;
+            }
+        }
+
+        &__info {
+            padding: 2em 2.2em;
+        }
+
+        &__footer {
+            margin: 4em 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card {
+        width: 18em;
+        height: 30em;
+
+        @include grid-mobile(14em, 16em);
+
+        &__image{
+            max-width: 18em;
+            border-radius: 10px 10px 0 0;
+
+            &-content {
+                max-height: 15em;
+            }
+        }
+
+        &__info {
+            padding: 0.8em 2.2em;
+        }
+
+        &__footer {
+            margin: 1.2em 0 0 0;
+        }
     }
 }
