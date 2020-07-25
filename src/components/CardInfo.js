@@ -34,7 +34,7 @@ const CardInfo = () => {
                         <i className="fas fa-share" />
                     </div>
                     
-                    {active ? <ShareMenu /> : null}
+                    {active ? <ShareMenu active={active} /> : null}
                 </div>
 
             </div>
